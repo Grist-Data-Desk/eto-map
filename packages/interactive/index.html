@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Warehouses storing products sterilized with ethylene oxide</title>
+  </head>
+  <body>
+    <div id="app">
+      <div class="eto-national-map">
+        <div class="eto-national-map__container">
+          <h1 class="eto-national-map__title">
+            Warehouses storing products sterilized with ethylene oxide
+          </h1>
+          <p class="eto-national-map__subhed">
+            Grist assembled a list of U.S. warehouses that have reported storing
+            products sterilized with ethylene oxide and others used by major
+            medical device manufacturers and distributors.
+          </p>
+          <div class="eto-national-map__search-container">
+            <div class="eto-national-map__suggestions-container">
+              <input
+                type="text"
+                id="search-input"
+                class="eto-national-map__search-input"
+                placeholder="Enter address or zip code..."
+                autocomplete="off"
+              />
+              <ul
+                id="search-suggestions"
+                class="eto-national-map__suggestions-list"
+              ></ul>
+            </div>
+            <button id="search-button" class="eto-national-map__search-button">
+              Search
+            </button>
+          </div>
+          <div
+            id="search-results"
+            class="eto-national-map__search-results"
+          ></div>
+          <div class="eto-national-map__legend">
+            <div class="eto-national-map__legend-item">
+              <div class="eto-national-map__legend-dot confirmed"></div>
+              <span>Confirmed</span>
+            </div>
+            <div class="eto-national-map__legend-item">
+              <div class="eto-national-map__legend-dot potential"></div>
+              <span>Potential</span>
+            </div>
+          </div>
+          <div class="eto-national-map__loading">Loading map data...</div>
+          <div class="eto-national-map__zoom-controls">
+            <button class="eto-national-map__zoom-button" id="zoom-in">
+              <svg
+                height="16"
+                stroke-linejoin="round"
+                style="color: currentColor"
+                viewBox="0 0 16 16"
+                width="16"
+                transform="scale(0.8)"
+                transform-origin="center"
+              >
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M 8.75,1 H7.25 V7.25 H1.5 V8.75 H7.25 V15 H8.75 V8.75 H14.5 V7.25 H8.75 V1.75 Z"
+                  fill="currentColor"
+                ></path>
+              </svg>
+            </button>
+            <button class="eto-national-map__zoom-button" id="zoom-out">
+              <svg
+                height="16"
+                stroke-linejoin="round"
+                style="color: currentcolor"
+                viewBox="0 0 16 16"
+                width="16"
+                transform="scale(0.8)"
+                transform-origin="center"
+              >
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M2 7.25H2.75H13.25H14V8.75H13.25H2.75H2V7.25Z"
+                  fill="currentColor"
+                ></path>
+              </svg>
+            </button>
+            <button class="eto-national-map__reset-button" id="reset-view">
+              🔄
+            </button>
+          </div>
+          <div id="map"></div>
+          <div class="eto-national-map__puerto-rico-container"></div>
+          <div id="tooltip" class="eto-national-map__tooltip"></div>
+          <div class="eto-national-map__source">Source: Grist analysis</div>
+          <div class="eto-national-map__source">
+            Map: Lylla Younes / Clayton Aldern / Grist
+          </div>
+          <div class="eto-national-map__source" style="font-weight: normal">
+            A full list of the warehouse addresses and company responses to
+            Grist questions can be found
+            <a
+              href="https://github.com/Grist-Data-Desk/eto-warehouses/tree/main"
+              target="_blank"
+              >here</a
+            >.
+          </div>
+        </div>
+      </div>
+    </div>
+    <script type="module" src="/src/index.ts"></script>
+  </body>
+</html>
