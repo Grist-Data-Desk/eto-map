@@ -84,3 +84,7 @@ The map can be embedded in other websites using an `iframe`. Here's an example:
   src="https://grist.org/project/updates/interactive-warehouses-storing-products-sterilized-with-ethylene-oxide/"
 ></iframe>
 ```
+
+## Credits
+
+Data reporting and development by [Lylla Younes](https://github.com/lylla318) and [Clayton Aldern](https://github.com/clayton-aldern) for [Grist](https://grist.org). Project structure and additional development by [Parker Ziegler](https://github.com/parkerziegler).
