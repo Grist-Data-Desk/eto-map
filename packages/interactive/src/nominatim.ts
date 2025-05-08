@@ -12,7 +12,7 @@ export async function queryNominatim(
   resultLimit = 5
 ): Promise<NominatimHit[]> {
   try {
-    const endpoint = `https://nominatim.openstreetmap.org/search?format=json&q=${encodeURIComponent(
+    const endpoint = `https://nominatim.openstreetmap.org/search?format=json&accept-language=es&q=${encodeURIComponent(
       query
     )}&countrycodes=us,pr&limit=${resultLimit}`;
 

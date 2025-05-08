@@ -63,9 +63,9 @@ export function showTooltip(event: MouseEvent, d: Warehouse): void {
 
   const tooltipContent = `
         <h3>${d.company}</h3>
-        <p><strong>Address:</strong> ${d.address}</p>
-        <p><strong>State:</strong> ${d.state}</p>
-        <p><strong>Status:</strong> ${d.type}</p>
+        <p><strong>Dirección:</strong> ${d.address}</p>
+        <p><strong>Estado:</strong> ${d.state}</p>
+        <p><strong>Estatus:</strong> ${d.type === "Confirmed" ? "Confirmado" : "Potencial"}</p>
         `;
 
   tooltip

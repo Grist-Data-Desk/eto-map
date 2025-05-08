@@ -3,19 +3,22 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Warehouses storing products sterilized with ethylene oxide</title>
+    <title>
+      Almacenes que albergan productos esterilizados con óxido de etileno
+    </title>
   </head>
   <body>
     <div id="app">
       <div class="eto-national-map">
         <div class="eto-national-map__container">
           <h1 class="eto-national-map__title">
-            Warehouses storing products sterilized with ethylene oxide
+            Almacenes que albergan productos esterilizados con óxido de etileno
           </h1>
           <p class="eto-national-map__subhed">
-            Grist assembled a list of U.S. warehouses that have reported storing
-            products sterilized with ethylene oxide and others used by major
-            medical device manufacturers and distributors.
+            Grist recopiló una lista de bodegas en Estados Unidos que informaron
+            que almacenan productos esterilizados con óxido de etileno y otros
+            utilizados por los principales fabricantes y distribuidores de
+            dispositivos médicos.
           </p>
           <div class="eto-national-map__search-container">
             <div class="eto-national-map__suggestions-container">
@@ -23,7 +26,7 @@
                 type="text"
                 id="search-input"
                 class="eto-national-map__search-input"
-                placeholder="Enter address or zip code..."
+                placeholder="Introduzca la dirección o el código postal..."
                 autocomplete="off"
               />
               <ul
@@ -32,7 +35,7 @@
               ></ul>
             </div>
             <button id="search-button" class="eto-national-map__search-button">
-              Search
+              Buscar
             </button>
           </div>
           <div
@@ -42,14 +45,16 @@
           <div class="eto-national-map__legend">
             <div class="eto-national-map__legend-item">
               <div class="eto-national-map__legend-dot confirmed"></div>
-              <span>Confirmed</span>
+              <span>Confirmados</span>
             </div>
             <div class="eto-national-map__legend-item">
               <div class="eto-national-map__legend-dot potential"></div>
-              <span>Potential</span>
+              <span>Potenciales</span>
             </div>
           </div>
-          <div class="eto-national-map__loading">Loading map data...</div>
+          <div class="eto-national-map__loading">
+            Cargando datos del mapa...
+          </div>
           <div class="eto-national-map__zoom-controls">
             <button class="eto-national-map__zoom-button" id="zoom-in">
               <svg
@@ -94,17 +99,17 @@
           <div id="map"></div>
           <div class="eto-national-map__puerto-rico-container"></div>
           <div id="tooltip" class="eto-national-map__tooltip"></div>
-          <div class="eto-national-map__source">Source: Grist analysis</div>
+          <div class="eto-national-map__source">Fuente: Análisis de Grist</div>
           <div class="eto-national-map__source">
-            Map: Lylla Younes / Clayton Aldern / Grist
+            Mapa: Lylla Younes / Clayton Aldern / Parker Ziegler / Grist
           </div>
           <div class="eto-national-map__source" style="font-weight: normal">
-            A full list of the warehouse addresses and company responses to
-            Grist questions can be found
+            Puede hallar una lista completa de las direcciones de los almacenes
+            y las respuestas que las compañías le dieron a Grist aquí.
             <a
               href="https://github.com/Grist-Data-Desk/eto-warehouses/tree/main"
               target="_blank"
-              >here</a
+              >aquí</a
             >.
           </div>
         </div>

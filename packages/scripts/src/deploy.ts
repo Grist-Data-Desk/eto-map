@@ -5,7 +5,7 @@ import * as url from "node:url";
 import { PutObjectCommand, S3Client } from "@aws-sdk/client-s3";
 
 const __dirname = url.fileURLToPath(new URL(".", import.meta.url));
-const ETO_MAP_ASSETS_PATH = "eto-map/dist/assets";
+const ETO_MAP_ES_ASSETS_PATH = "eto-map-es/dist/assets";
 
 /**
  * Derive the Content-Type header from the file extension.
@@ -56,7 +56,7 @@ const main = async (): Promise<void> => {
     );
     const putObjectCommand = new PutObjectCommand({
       Bucket: "grist",
-      Key: `${ETO_MAP_ASSETS_PATH}/${file}`,
+      Key: `${ETO_MAP_ES_ASSETS_PATH}/${file}`,
       Body,
       ACL: "public-read",
       ContentType: deriveContentType(file),

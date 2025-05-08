@@ -151,11 +151,11 @@ async function handleSearch({
   const searchResults = d3.select("#search-results");
 
   if (query.length === 0) {
-    searchResults.text("Please enter an address or zip code.");
+    searchResults.text("Introduzca una dirección o código postal.");
     return;
   }
 
-  searchResults.text("Searching...");
+  searchResults.text("Buscando...");
   removeUserMarker();
 
   const results = await queryNominatim(query, 1);
@@ -163,6 +163,8 @@ async function handleSearch({
   if (results.length > 0) {
     processSelectedLocation({ hit: results[0], svg, g, zoom, warehouses });
   } else {
-    searchResults.text("Address not found. Please try a different search.");
+    searchResults.text(
+      "La dirección no fue encontrada. Por favor, intente una búsqueda diferente."
+    );
   }
 }

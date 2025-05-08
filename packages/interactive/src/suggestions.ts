@@ -224,15 +224,18 @@ export function processSelectedLocation({
   const locationSpan = `<span style="font-style: normal;">📍</span>&emsp;`;
   const warehouseSpan = `<span style="font-style: normal;">🚚</span>&emsp;`;
 
-  const warehouseType = nearest.warehouse.type.toLowerCase();
+  const warehouseType =
+    nearest.warehouse.type.toLowerCase() === "confirmed"
+      ? "confirmado"
+      : "potencial";
   const warehouseName = nearest.warehouse.company;
-  const warehouseText = `<strong>Nearest ${warehouseType} warehouse:</strong> ${warehouseName} (${nearest.distance.toFixed(
+  const warehouseText = `<strong>Almacén ${warehouseType} más cercano:</strong> ${warehouseName} (${nearest.distance.toFixed(
     1
-  )} miles away)`;
+  )} millas de distancia)`;
 
   highlightWarehouse(nearest.warehouse, svg, g);
 
-  const locationString = `${locationSpan}<strong>Searched location:</strong> ${displayName}${mapPanningMessage}`;
+  const locationString = `${locationSpan}<strong>Ubicación buscada:</strong> ${displayName}${mapPanningMessage}`;
   const finalHtml = `${locationString}<br />${warehouseSpan}${warehouseText}`;
   searchResults.html(finalHtml);
 }
